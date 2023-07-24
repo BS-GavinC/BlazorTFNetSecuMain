@@ -1,0 +1,30 @@
+﻿@layout DemoLayout
+@page "/demo/demo2"
+
+<h3>Demo2</h3>
+
+<EditForm Model="RegisterFormulaire" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <div>
+        <label for="Firstname">Prenom</label>
+        <input id="Firstname" @bind-value="RegisterFormulaire.Firstname" class="form-control" />
+    </div>
+    <div>
+    <label for="Lastname">Nom de famille</label>
+        <input id="Lastname" type="text" @bind-value="RegisterFormulaire.Lastname" class="form-control" />
+    </div>
+    <div>
+    <label for="Email">Email</label>
+        <input id="Email" type="email" @bind-value="RegisterFormulaire.Email" />
+    </div>
+    <div>
+    <label for="Password">Mot de passe</label>
+        <input id="Password" type="password" @bind-value="RegisterFormulaire.Password" class="form-control" />
+    </div>
+    <div>
+    <label for="ConfirmationPassword">Confirmation du mot de passe</label>
+        <input id="ConfirmationPassword" type="password" @bind-value="RegisterFormulaire.ConfirmationPassword" class="form-control" />
+    </div>
+    <button type="submit">Valider</button>
+    <ValidationSummary/>
+</EditForm>

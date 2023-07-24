@@ -1,7 +1,21 @@
-﻿@layout ExoLayout
+﻿@using BlazorProjectFTNetSecu.Client.Pages.Shared
+@layout ExoLayout
 @page "/Exo/Exo1"
+
 
 <h3>Exo1</h3>
 
+@if (QuestionnaireFini)
+{
+    <h5>Questionnaire fini !</h5>
+    <h5>@BonnesReponses Bonnes reponses sur @QuestionActuelle</h5>
+
+    <button @onclick="RestartGame">Restart</button>
+}
+else
+{
+   <QuestionComponent ResponseEvent="RecevoirReponse" UserName="Gavin" Question="Questions[QuestionActuelle]" QuestionNbr="QuestionActuelle + 1"></QuestionComponent>
+ 
+}
 
 
