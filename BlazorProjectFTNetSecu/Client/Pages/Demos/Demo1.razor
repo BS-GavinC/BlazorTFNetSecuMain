@@ -1,7 +1,43 @@
 ﻿
 @layout DemoLayout
 @page "/demo/demo1"
+@using BlazorProjectFTNetSecu.Shared;
 
-<h3>Demo1</h3>
 
-<p>@Valeur</p>
+
+
+    <h3>Demo1</h3>
+    <p>@TwoWayBindingValue</p>
+
+    <input @bind="@TwoWayBindingValue" type="text" />
+
+<div style="border : 1px solid red">
+    <br />
+    <h2>ENFANT -> PARENT</h2>
+
+    <p>Information de l'enfant : @ValueFromChild</p>
+    
+    @for(int i = 0; i< 3; i++)
+    {
+        <Demo1EnfantEvent Value="@i" EventEnfant="@ReceiveEventInvoke"></Demo1EnfantEvent>
+    }
+
+    </div>
+    <br />
+    <br />
+    <div style="border : 1px solid red">
+    <h2>PARENT -> ENFANT</h2>
+
+    <button @onclick="AddItem" >Add Valeur</button>
+
+
+    @foreach(User user in Users)
+    {
+        <Demo1Enfant ValeurEnfant="@user"></Demo1Enfant>
+    }
+</div>
+    
+
+    
+
+

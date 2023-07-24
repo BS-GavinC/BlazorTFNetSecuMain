@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProjectFTNetSecu.Server", "BlazorProjectFTNetSecu\Server\BlazorProjectFTNetSecu.Server.csproj", "{A70C8FB8-2C5B-41DB-BAEC-35C4B3B09C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorProjectFTNetSecu.Server", "BlazorProjectFTNetSecu\Server\BlazorProjectFTNetSecu.Server.csproj", "{A70C8FB8-2C5B-41DB-BAEC-35C4B3B09C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProjectFTNetSecu.Client", "BlazorProjectFTNetSecu\Client\BlazorProjectFTNetSecu.Client.csproj", "{420A2757-E6FF-4394-8BE0-A3A790D37420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorProjectFTNetSecu.Client", "BlazorProjectFTNetSecu\Client\BlazorProjectFTNetSecu.Client.csproj", "{420A2757-E6FF-4394-8BE0-A3A790D37420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProjectFTNetSecu.Shared", "BlazorProjectFTNetSecu\Shared\BlazorProjectFTNetSecu.Shared.csproj", "{408BC3DC-0641-4F1D-B23D-2AC4D833C169}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorProjectFTNetSecu.Shared", "BlazorProjectFTNetSecu\Shared\BlazorProjectFTNetSecu.Shared.csproj", "{408BC3DC-0641-4F1D-B23D-2AC4D833C169}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
