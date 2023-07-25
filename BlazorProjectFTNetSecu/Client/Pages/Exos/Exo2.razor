@@ -1,0 +1,42 @@
+﻿@layout ExoLayout
+@page "/exo/exo2"
+
+
+<h3>Formulaire Exo2</h3>
+
+@if (FormValidated)
+{
+    <h1 style="color: chartreuse">SUCCESS ! T TRO FOR BG !</h1>
+}
+else
+{
+    <EditForm Model="ExoFormData" OnValidSubmit="OnValidSubmit">
+
+    <DataAnnotationsValidator/>
+    <div>
+        <label for="Name">Nom</label>
+        <input id="Name" type="text" @bind-value="ExoFormData.Name" />
+    </div>
+    <div>
+        <label for="Email">Email</label>
+        <input id="Email" type="email" @bind-value="ExoFormData.Email" />
+    </div>
+    <div>
+        <label for="Tel">Telephone</label>
+        <input id="Tel" type="tel" @bind-value="ExoFormData.Tel" />
+    </div>
+    <div>
+        <label for="Mess">Message</label>
+        <input id="Mess" type="text" @bind-value="ExoFormData.Message" />
+    </div>
+    <div>
+        <label for="Color">Couleur</label>
+        <input id="Color" type="color" @bind-value="ExoFormData.Color" />
+    </div>
+    <ValidationSummary/>
+
+    <button>Valider</button>
+</EditForm>
+}
+
+
