@@ -7,6 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+builder.Services.AddCors(o =>
+{
+    o.AddDefaultPolicy(op =>
+    {
+        op.AllowAnyMethod();
+        op.AllowAnyOrigin();
+        op.AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

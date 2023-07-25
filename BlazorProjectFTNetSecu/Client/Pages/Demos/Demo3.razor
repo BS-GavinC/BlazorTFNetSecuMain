@@ -1,0 +1,22 @@
+﻿@layout DemoLayout
+@page "/demo/demo3"
+
+<h3>Demo3</h3>
+<ul>
+    @*@foreach (int nbr in maListe)
+    {
+        <li>@nbr</li>
+    }*@
+
+    <Virtualize Items="maListe" Context="item">
+        <li>
+            @item
+        </li>
+    </Virtualize>
+
+    
+
+</ul>
+
+
+
