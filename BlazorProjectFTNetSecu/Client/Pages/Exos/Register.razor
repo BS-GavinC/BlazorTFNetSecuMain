@@ -1,0 +1,24 @@
+﻿@layout ExoLayout
+@page "/exo/register"
+
+<h3>REGISTER</h3>
+
+
+<EditForm Model="NewUser" OnValidSubmit="SubmitForm">
+
+    <DataAnnotationsValidator/>
+    <div>
+        <label for="Email">Email</label>
+        <input type="text" id="Email" @bind-value="NewUser.Email" />
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" id="Password" @bind-value="NewUser.Password" />
+    </div>
+    <div>
+        <label for="SecretMessage">Message Secret</label>
+        <input type="text" id="SecretMessage" @bind-value="NewUser.SecretMessage" />
+    </div>
+    <ValidationSummary/>
+    <button>Valider</button>
+</EditForm>

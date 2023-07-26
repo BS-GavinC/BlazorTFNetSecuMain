@@ -1,0 +1,26 @@
+﻿@layout ExoLayout
+@page "/exo/exo3"
+
+<h2>LOG</h2>
+
+@if (isConnected)
+{
+    <p>Mon Message Secret : @secretMessage</p>
+
+    <button @onclick=Disconnect>Disconnect</button>
+}
+else
+{
+    <NavLink href="/exo/login">
+        LOGIN
+    </NavLink>
+
+    <NavLink href="/exo/register">
+        REGISTER
+    </NavLink>
+}
+
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@layout ExoLayout
+@page "/exo/login"
+
+<h3>LOGIN</h3>
+
+@if (FailConnection)
+{
+    <p>Identifiant incorrect</p>
+}
+
+<EditForm Model="loginAuthForm" OnValidSubmit="SubmitLogin">
+
+    <DataAnnotationsValidator />
+    <div>
+        <label for="Email">Email</label>
+        <input type="text" id="Email" @bind-value="loginAuthForm.Email" />
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" id="Password" @bind-value="loginAuthForm.Password" />
+    </div>
+    
+    <ValidationSummary />
+    <button>Valider</button>
+</EditForm>
